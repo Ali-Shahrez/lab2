@@ -127,7 +127,7 @@ def update_score(score, correct):
     return score
     
     #------------------------
-    raise NotImplementedError("This function is not implemented yet.")
+
     #------------------------
 
 #---------------------------------------
@@ -143,9 +143,10 @@ def next_round(round_number):
     - int: The next round number.
     """
     #------------------------
-    # Add your code here
+    round_number+=1
+    return round_number
     #------------------------
-    raise NotImplementedError("This function is not implemented yet.")
+
     #------------------------
 
 #---------------------------------------
