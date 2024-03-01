@@ -73,7 +73,7 @@ def check_answer(player_answer, correct_answer):
 
 #---------------------------------------
 
-def remove_question(category, question):
+def remove_question(category, questions):
     """
     Removes a question from the list once it has been asked.
 
@@ -85,9 +85,11 @@ def remove_question(category, question):
     - None
     """
     #------------------------
-    # Add your code here
+    if category in questions:
+        qlis = questions[category]
+        if questions in qlis:
+            qlis.remove(questions)
     #------------------------
-    raise NotImplementedError("This function is not implemented yet.")
     #------------------------
 
 #---------------------------------------
