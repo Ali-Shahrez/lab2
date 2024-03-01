@@ -65,7 +65,8 @@ def game_over_message(final_score):
     Returns: None
     """
     #------------------------
-    # Add your code here
+    print('game over')
+    print(final_score)
     #------------------------
     raise NotImplementedError("This function is not implemented yet.")
     #------------------------
