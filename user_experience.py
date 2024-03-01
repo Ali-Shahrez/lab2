@@ -28,7 +28,7 @@ def choose_difficulty():
 def display_leaderboard(leaderboard):
     """
     Displays the leaderboard, showing top scores in descending order.
-    
+
     Parameters:
     - leaderboard (dict): A dictionary containing player names as keys and their scores as values.
 
@@ -38,6 +38,22 @@ def display_leaderboard(leaderboard):
     """
     #------------------------
     # Add your code here
+    if leaderboard='':
+        print("no score to display")
+    else:
+        leaderboard{}
+    scores=[]
+    score1=0
+    item_no=int(input("enter number of items to enter: "))
+    for i in range(item_no):
+        score1=int(input("enter score: "))
+        if score1<=score1:
+            scores[i]=score1
+    for i in range(item_no):
+        name=input("enter name: ")
+        dict(name,scores)
+    print()
+
     #------------------------
     raise NotImplementedError("This function is not implemented yet.")
     #------------------------
@@ -94,10 +110,16 @@ def provide_feedback(is_correct):
     - is it correct?   "Well done!"
     - is it incorrect? "Sorry, that's incorrect."
     """
+
     #------------------------
     # Add your code here
+    if is_correct==True:
+        return "Well done!"
+    else:
+        return "Sorry, that's incorrect"
+
     #------------------------
-    raise NotImplementedError("This function is not implemented yet.")
+   
     #------------------------
 
 #---------------------------------------
@@ -137,8 +159,12 @@ def skip_question(allowed_skips):
     """
     #------------------------
     # Add your code here
+    if allowed_skips<=0:
+        return False
+    else:
+        return allowed_skips-1
     #------------------------
-    raise NotImplementedError("This function is not implemented yet.")
+    
     #------------------------
 
 #---------------------------------------
