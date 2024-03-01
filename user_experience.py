@@ -5,6 +5,7 @@
 
 
 #---------------------------------------
+import operator
 import random
 def choose_difficulty():
     """
@@ -38,22 +39,11 @@ def display_leaderboard(leaderboard):
     """
     #------------------------
     # Add your code here
-    if leaderboard='':
-        print("no score to display")
-    else:
-        leaderboard{}
-    scores=[]
-    score1=0
-    item_no=int(input("enter number of items to enter: "))
-    for i in range(item_no):
-        score1=int(input("enter score: "))
-        if score1<=score1:
-            scores[i]=score1
-    for i in range(item_no):
-        name=input("enter name: ")
-        dict(name,scores)
-    print()
-
+  if leaderboard='':
+    return "no score to display"
+else:
+    sorted_dict = dict(sorted(leaderboard.items(), key=operator.itemgetter(1), reverse=True))
+    return sorted_dict
     #------------------------
     #------------------------
 
@@ -150,7 +140,7 @@ def fifty_fifty_lifeline(correct_answer, options):
     #------------------------
     new_op=options.remove(correct_answer)
     all=new_op[random.randint(0,(len(options)-1)]
-
+    return all
     #------------------------
 
 #---------------------------------------
