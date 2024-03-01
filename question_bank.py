@@ -105,9 +105,11 @@ def display_question_and_accept_answer(question):
     - str: The player's answer to the question.
     """
     #------------------------
-    # Add your code here
+    qtext, answer = question
+    print(qtext)
+    panswer = input("Your answer: ")
+    return panswer
     #------------------------
-    raise NotImplementedError("This function is not implemented yet.")
     #------------------------
 
 #---------------------------------------
