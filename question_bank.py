@@ -64,14 +64,16 @@ def check_answer(player_answer, correct_answer):
     - bool: True if the answers match, False otherwise.
     """
     #------------------------
-    # Add your code here
+    if player_answer==correct_answer:
+        return True
+    else:
+        return False
     #------------------------
-    raise NotImplementedError("This function is not implemented yet.")
     #------------------------
 
 #---------------------------------------
 
-def remove_question(category, question):
+def remove_question(category, questions):
     """
     Removes a question from the list once it has been asked.
 
@@ -83,9 +85,11 @@ def remove_question(category, question):
     - None
     """
     #------------------------
-    # Add your code here
+    if category in questions:
+        qlis = questions[category]
+        if questions in qlis:
+            qlis.remove(questions)
     #------------------------
-    raise NotImplementedError("This function is not implemented yet.")
     #------------------------
 
 #---------------------------------------
@@ -101,9 +105,11 @@ def display_question_and_accept_answer(question):
     - str: The player's answer to the question.
     """
     #------------------------
-    # Add your code here
+    qtext, answer = question
+    print(qtext)
+    panswer = input("Your answer: ")
+    return panswer
     #------------------------
-    raise NotImplementedError("This function is not implemented yet.")
     #------------------------
 
 #---------------------------------------
@@ -120,9 +126,12 @@ def provide_hint(category, question):
     - str: The hint for the given question.
     """
     #------------------------
-    # Add your code here
+    if category in hints:
+        hint = hints[category].get(question, "No hint")
+        return hint
+    else:
+        return "No hints available for questions in this category."
     #------------------------
-    raise NotImplementedError("This function is not implemented yet.")
     #------------------------
 
 #---------------------------------------
@@ -138,9 +147,8 @@ def display_correct_answer(correct_answer):
     - None
     """
     #------------------------
-    # Add your code here
+    print("Incorrect answer. The correct answer is:", correct_answer)
     #------------------------
-    raise NotImplementedError("This function is not implemented yet.")
     #------------------------
 
 #---------------------------------------
