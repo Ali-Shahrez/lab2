@@ -31,7 +31,7 @@ def choose_category(categories):
     category=input('choose a category')
     return category
     #------------------------
-    raise NotImplementedError("This function is not implemented yet.")
+    
     #------------------------
 
 #---------------------------------------
@@ -50,7 +50,7 @@ def display_score(score, round_number):
     print(int(score))
     print(int(round_number))
     #------------------------
-    raise NotImplementedError("This function is not implemented yet.")
+    
     #------------------------
 
 #---------------------------------------
@@ -68,7 +68,7 @@ def game_over_message(final_score):
     print('game over')
     print(final_score)
     #------------------------
-    raise NotImplementedError("This function is not implemented yet.")
+    
     #------------------------
 
 #---------------------------------------
@@ -83,9 +83,10 @@ def run_game_rounds(categories):
     Returns: None
     """
     #------------------------
-    # Add your code here
+    for i in range (5):
+        return categories
     #------------------------
-    raise NotImplementedError("This function is not implemented yet.")
+    
     #------------------------
 
 #---------------------------------------
@@ -102,9 +103,9 @@ def validate_answer(player_answer, correct_answer):
     - bool: True if the player's answer is correct, False otherwise.
     """
     #------------------------
-    # Add your code here
+    if player_answer==correct_answer:
+        return True
     #------------------------
-    raise NotImplementedError("This function is not implemented yet.")
     #------------------------
 
 #---------------------------------------
