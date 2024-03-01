@@ -127,7 +127,7 @@ def update_score(score, correct):
     return score
     
     #------------------------
-
+#updates the score
     #------------------------
 
 #---------------------------------------
@@ -146,7 +146,7 @@ def next_round(round_number):
     round_number+=1
     return round_number
     #------------------------
-
+#increments the round
     #------------------------
 
 #---------------------------------------
