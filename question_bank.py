@@ -64,9 +64,11 @@ def check_answer(player_answer, correct_answer):
     - bool: True if the answers match, False otherwise.
     """
     #------------------------
-    # Add your code here
+    if player_answer==correct_answer:
+        return True
+    else:
+        return False
     #------------------------
-    raise NotImplementedError("This function is not implemented yet.")
     #------------------------
 
 #---------------------------------------
