@@ -16,8 +16,11 @@ def choose_difficulty():
     """
     #------------------------
     # Add your code here
+    difficulty=input("enter difficulty level ('easy', 'medium', 'hard')")
+    difficulty=difficulty.lower()
     #------------------------
-    raise NotImplementedError("This function is not implemented yet.")
+    return difficulty
+    
     #------------------------
 
 #---------------------------------------
@@ -25,7 +28,7 @@ def choose_difficulty():
 def display_leaderboard(leaderboard):
     """
     Displays the leaderboard, showing top scores in descending order.
-
+    
     Parameters:
     - leaderboard (dict): A dictionary containing player names as keys and their scores as values.
 
