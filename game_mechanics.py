@@ -28,7 +28,8 @@ def choose_category(categories):
     - str: The chosen category.
     """
     #------------------------
-    # Add your code here
+    category=input('choose a category')
+    return category
     #------------------------
     raise NotImplementedError("This function is not implemented yet.")
     #------------------------
