@@ -47,7 +47,8 @@ def display_score(score, round_number):
     Returns: None
     """
     #------------------------
-    # Add your code here
+    print(int(score))
+    print(int(round_number))
     #------------------------
     raise NotImplementedError("This function is not implemented yet.")
     #------------------------
