@@ -44,9 +44,10 @@ def select_random_question(category):
     - tuple: A tuple containing the selected question (str) and its corresponding answer (str).
     """
     #------------------------
-    # Add your code here
+    questionss = questions.get(category, [])
+    ranq = random.choice(questionss)
+    return ranq
     #------------------------
-    raise NotImplementedError("This function is not implemented yet.")
     #------------------------
 
 #---------------------------------------
