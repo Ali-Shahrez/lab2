@@ -147,9 +147,8 @@ def display_correct_answer(correct_answer):
     - None
     """
     #------------------------
-    # Add your code here
+    print("Incorrect answer. The correct answer is:", correct_answer)
     #------------------------
-    raise NotImplementedError("This function is not implemented yet.")
     #------------------------
 
 #---------------------------------------
