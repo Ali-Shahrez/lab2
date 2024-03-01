@@ -122,7 +122,10 @@ def update_score(score, correct):
     - int: The updated score.
     """
     #------------------------
-    # Add your code here
+    if correct==True:
+        score+=1
+    return score
+    
     #------------------------
     raise NotImplementedError("This function is not implemented yet.")
     #------------------------
