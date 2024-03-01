@@ -8,16 +8,27 @@ import random
 # Simplified example with one category. Expand as needed.
 questions = {
     "Science": [
-        ("What is the chemical symbol for water?", "H2O"),
-        # Add more questions as tuples (question, answer)
+        ("What is the chemical symbol for water?", "H2O"), ("What is the chemical symbol for hydrogen", "H"), 
+        ("What is the chemical symbol for oxygen?", "O2"),
+        
+    ],
+    "Maths": [
+        ("What is 2+2?", "0"), ("What is 6/3?", "2"), 
+        ("What is 2x2?", "4"),
     ],
 }
 
 hints = {
     "Science": [
-        # Pair each question with a corresponding hint.
+        ("What is the chemical symbol for water?", "what is included in the components of water"),
+        ("What is the chemical symbol for hydrogen?", "Its in the name"),
+        ("What is the chemical symbol for oxygen?", "its in the name too"), ],
+        "Maths": [
+        ("What is 2+2?", "add it"), ("What is 6/3?", "divide it"), 
+        ("What is 2x2?", "multiply it"),
+       
     ],
-    # Repeat for other categories as needed.
+    
 }
 
 #---------------------------------------
