@@ -5,6 +5,9 @@
 
 
 #---------------------------------------
+import operator
+import random
+
 
 def choose_difficulty():
     """
@@ -16,8 +19,11 @@ def choose_difficulty():
     """
     #------------------------
     # Add your code here
+    difficulty=input("enter difficulty level ('easy', 'medium', 'hard')")
+    difficulty=difficulty.lower()
     #------------------------
-    raise NotImplementedError("This function is not implemented yet.")
+    return difficulty
+    
     #------------------------
 
 #---------------------------------------
@@ -35,8 +41,12 @@ def display_leaderboard(leaderboard):
     """
     #------------------------
     # Add your code here
+  if leaderboard='':
+    return "no score to display"
+else:
+    sorted_dict = dict(sorted(leaderboard.items(), key=operator.itemgetter(1), reverse=True))
+    return sorted_dict
     #------------------------
-    raise NotImplementedError("This function is not implemented yet.")
     #------------------------
 
 #---------------------------------------
@@ -54,8 +64,10 @@ def save_score(player_name, score, file_path='scores.txt'):
     """
     #------------------------
     # Add your code here
+    f=open(file_path,'w')
+    f.write(f"{player_name},{score}")
+
     #------------------------
-    raise NotImplementedError("This function is not implemented yet.")
     #------------------------
 
 #---------------------------------------
@@ -73,7 +85,14 @@ def load_top_scores(file_path='scores.txt'):
     #------------------------
     # Add your code here
     #------------------------
-    raise NotImplementedError("This function is not implemented yet.")
+    f=open(file_path,read)
+    lists=[]
+    for i in f:
+        f.read(i)
+        lists[i]=f.read(i)
+        print(lists)
+
+
     #------------------------
 
 #---------------------------------------
@@ -91,10 +110,16 @@ def provide_feedback(is_correct):
     - is it correct?   "Well done!"
     - is it incorrect? "Sorry, that's incorrect."
     """
+
     #------------------------
     # Add your code here
+    if is_correct==True:
+        return "Well done!"
+    else:
+        return "Sorry, that's incorrect"
+
     #------------------------
-    raise NotImplementedError("This function is not implemented yet.")
+   
     #------------------------
 
 #---------------------------------------
@@ -115,7 +140,9 @@ def fifty_fifty_lifeline(correct_answer, options):
     #------------------------
     # Add your code here
     #------------------------
-    raise NotImplementedError("This function is not implemented yet.")
+    new_op=options.remove(correct_answer)
+    all=new_op[random.randint(0,(len(options)-1)]
+    return all
     #------------------------
 
 #---------------------------------------
@@ -133,9 +160,14 @@ def skip_question(allowed_skips):
     This function checks if the player has any skips available. If so, it decrements the allowed_skips counter and returns True, indicating the question can be skipped. If no skips are available, it returns False. This function should be called before presenting a new question to the player.
     """
     #------------------------
-    # Add your code here
+    
+    if allowed_skips<=0:
+        return False
+    else:
+        allowed_skips-=1
+        return True
     #------------------------
-    raise NotImplementedError("This function is not implemented yet.")
+    
     #------------------------
 
 #---------------------------------------
