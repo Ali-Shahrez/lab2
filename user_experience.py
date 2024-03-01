@@ -5,7 +5,7 @@
 
 
 #---------------------------------------
-
+import random
 def choose_difficulty():
     """
     Allows players to choose the difficulty level of the questionsThe user is going to input their choice.
@@ -55,7 +55,6 @@ def display_leaderboard(leaderboard):
     print()
 
     #------------------------
-    raise NotImplementedError("This function is not implemented yet.")
     #------------------------
 
 #---------------------------------------
@@ -73,8 +72,10 @@ def save_score(player_name, score, file_path='scores.txt'):
     """
     #------------------------
     # Add your code here
+    f=open(file_path,'w')
+    f.write(f"{player_name},{score}")
+
     #------------------------
-    raise NotImplementedError("This function is not implemented yet.")
     #------------------------
 
 #---------------------------------------
@@ -92,7 +93,14 @@ def load_top_scores(file_path='scores.txt'):
     #------------------------
     # Add your code here
     #------------------------
-    raise NotImplementedError("This function is not implemented yet.")
+    f=open(file_path,read)
+    lists=[]
+    for i in f:
+        f.read(i)
+        lists[i]=f.read(i)
+        print(lists)
+
+
     #------------------------
 
 #---------------------------------------
@@ -140,7 +148,9 @@ def fifty_fifty_lifeline(correct_answer, options):
     #------------------------
     # Add your code here
     #------------------------
-    raise NotImplementedError("This function is not implemented yet.")
+    new_op=options.remove(correct_answer)
+    all=new_op[random.randint(0,(len(options)-1)]
+
     #------------------------
 
 #---------------------------------------
@@ -158,11 +168,12 @@ def skip_question(allowed_skips):
     This function checks if the player has any skips available. If so, it decrements the allowed_skips counter and returns True, indicating the question can be skipped. If no skips are available, it returns False. This function should be called before presenting a new question to the player.
     """
     #------------------------
-    # Add your code here
+    
     if allowed_skips<=0:
         return False
     else:
-        return allowed_skips-1
+        allowed_skips-=1
+        return True
     #------------------------
     
     #------------------------
