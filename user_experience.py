@@ -7,6 +7,8 @@
 #---------------------------------------
 import operator
 import random
+
+
 def choose_difficulty():
     """
     Allows players to choose the difficulty level of the questionsThe user is going to input their choice.
