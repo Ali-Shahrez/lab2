@@ -178,9 +178,13 @@ def restart_or_exit():
     Returns: None
     """
     #------------------------
-    # Add your code here
+    user_input=input('do you wish to exit or restart the game?')
+    if user_input=='exit':
+        break
+    elif user_input=='restart':
+        continue
     #------------------------
-    raise NotImplementedError("This function is not implemented yet.")
+    
     #------------------------
 
 #---------------------------------------
