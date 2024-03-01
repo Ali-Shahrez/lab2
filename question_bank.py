@@ -126,9 +126,12 @@ def provide_hint(category, question):
     - str: The hint for the given question.
     """
     #------------------------
-    # Add your code here
+    if category in hints:
+        hint = hints[category].get(question, "No hint")
+        return hint
+    else:
+        return "No hints available for questions in this category."
     #------------------------
-    raise NotImplementedError("This function is not implemented yet.")
     #------------------------
 
 #---------------------------------------
